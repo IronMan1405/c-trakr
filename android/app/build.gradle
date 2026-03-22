@@ -100,6 +100,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            storeFile file('C-Trakr.keystore')
+            storePassword 'abcd1234'
+            keyAlias 'C-Trakr'
+            keyPassword 'abcd1234'
+    }
     }
     buildTypes {
         debug {
@@ -112,6 +118,7 @@ android {
             shrinkResources (findProperty('android.enableShrinkResourcesInReleaseBuilds')?.toBoolean() ?: false)
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
         }
     }
     packagingOptions {
