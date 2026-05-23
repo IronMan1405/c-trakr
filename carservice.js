@@ -2,31 +2,41 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+const STORAGE_KEY = "cars";
+
 export const CarService = {
   async getCars() {
     try {
-      const storedCars = await AsyncStorage.getItem('cars');
-      if (storedCars !== null) {
-        return JSON.parse(storedCars);
+      const storedCars = await AsyncStorage.getItem(STORAGE_KEY);
+      if (!storedCars) {
+        return [];
       }
-      return [];
+      return JSON.parse(storedCars);
     } catch (error) {
       console.error('Error retrieving cars:', error);
       return [];
     }
   },
 
-  async saveCar(carName, fuel, carType) {
+  async saveCar(car) {
     try {
-      const car = { name: carName, fuel: fuel, car: carType };
-      let storedCars = await AsyncStorage.getItem('cars');
-      storedCars = storedCars ? JSON.parse(storedCars) : [];
-      storedCars.push(car);
-      await AsyncStorage.setItem('cars', JSON.stringify(storedCars));
-      return true;
+		const storedCars = await this.getCars();
+		const updatedCars = [...storedCars, car];
+		await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(updatedCars));
+		return true;
     } catch (error) {
-      console.error('Error saving car:', error);
-      return false;
+		console.error('Error saving car:', error);
+		return false;
     }
-  }
+  },
+
+  async deleteAllCars() {
+    try {
+		await AsyncStorage.removeItem(STORAGE_KEY);
+		return true;
+    } catch (error) {
+		console.error("Error deleting cars:", error); 
+		return false;
+    }
+  },
 };

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { ScrollView, View, Text, Button, StyleSheet, TouchableOpacity } from "react-native";
-import { useMyList } from "../MyListContext";
+import { useCars } from "../MyListContext";
 import { ListItem } from "react-native-elements";
 import { CarService } from "../carservice";
 import Icon from "react-native-vector-icons/Fontisto";
@@ -8,8 +8,7 @@ import Fontisto from "react-native-vector-icons/Fontisto";
 import Toast from "react-native-toast-message";
 
 const Home = ({navigation}) => {
-    let { myList } = useMyList();
-    let [cars, setCars] = useState([]);
+    const { cars, setCars } = useCars();
 
     const getCars = async () => {
         const cars = await CarService.getCars();
@@ -22,35 +21,7 @@ const Home = ({navigation}) => {
         getCars();
         Toast.show({type: 'success',text1: 'Success', text2: "Refreshed screen", visibilityTime: 3000, text1Style: {fontSize: 16, fontWeight: 'bold'},text2Style: {color:'#262626', fontSize:14}});
     };
-    
-    const showList = () => {
-        console.log('cars: ', cars);
-        console.log('mylist: ', myList);
 
-
-        if (myList.length === 0) return;
-        let result = [];
-
-        for (let i in myList) {
-            console.log(i, myList[i], myList[i]);
-
-            result.push(
-                <ListItem
-                key={i+'_car'}
-                topDivider
-                bottomDivider
-                onPress={() => alert(myList[i].name, myList[i].car)}>
-                    <ListItem.Chevron/>
-                    <ListItem.Content>
-                        <ListItem.Title>
-                            {myList[i].name}
-                        </ListItem.Title>
-                    </ListItem.Content>
-                </ListItem>
-            );
-        };
-        return result;
-    };
     return (
         <ScrollView style={styles.backgroundscreen}>
             <View>
@@ -84,7 +55,6 @@ const Home = ({navigation}) => {
                         </ListItem.Content>
                     </ListItem>
                 ))}
-                <View>{ /* showList() */ }</View>
             </View>
         </ScrollView>
     );

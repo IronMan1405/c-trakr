@@ -5,7 +5,16 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "package": "com.carbon"
+    },
+    "ios": {
+      "bundleIdentifier": "com.carbon"
+    },
+    "splash": {
+      "backgroundColor": "#ffffff"
+    }
   },
   "name": "Carbon"
 }

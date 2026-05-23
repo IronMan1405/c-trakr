@@ -7,6 +7,8 @@ node_modules/
 .expo/
 dist/
 web-build/
+android/
+ios/
 
 # Native
 *.orig.*
@@ -33,3 +35,30 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+# logs
+logs/
+*.log
+
+# temporary files
+temp/
+tmp/
+
+# coverage
+coverage/
+
+*.apk
+*.aab
+*.ipa
+
+.expo-shared/
+
+.vscode/
+.idea/
+
+build/
+
+*.db
+*.sqlite
+
+Thumbs.db

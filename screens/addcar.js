@@ -2,15 +2,15 @@ import React, {useState} from "react";
 import { ScrollView, Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import { SelectList } from 'react-native-dropdown-select-list';
 import {Input} from 'react-native-elements';
-import { useMyList } from "../MyListContext";
 import Toast from "react-native-toast-message";
-import { CarService } from "../carservice";
 import Icon from "react-native-vector-icons/Fontisto"
 
+import { useCars } from "../MyListContext";
+import { CarService } from "../carservice";
 
 const AddCar = ({navigation}) => {
-    let {myList} = useMyList();
-    let {setMyList} = useMyList();
+    const { cars, setCars } = useCars();
+
     const carType = [
         {key: "Compact Car", value: "Compact Car"},
         {key: "Mid-ranged Car", value: "Mid-ranged Car"},
@@ -26,18 +26,28 @@ const AddCar = ({navigation}) => {
     const [fuel, setFuel] = useState("");
     const [values, setValues] = useState({carAdded: ""});
 
-    const AddedCarDetails = () => {
-        // storedUser(myList);
+    const AddedCarDetails = async () => {
         if (car.length === 0 || fuel.length === 0 || values.carAdded.length === 0) {
             Toast.show({type: 'error',text1: 'Error', text2: 'Please fill out all the fields.', visibilityTime: 3000, text1Style: {fontSize: 16, fontWeight: 'bold'},text2Style: {color:'#262626', fontSize:14}})
             return;
         }
-        // const prevStorage = getUser();
-        // console.log('prev storage: ', prevStorage);
-        //myList.push({ name: values.carAdded, car: car, fuel: fuel});
-        CarService.saveCar(values.carAdded, fuel, car);
+
+        const newCar = {
+            id: Date.now().toString(),
+            name: values.carAdded,
+            fuel,
+            car,
+            stats: {
+                totalDist: 0,
+                totalFuel: 0,
+                totalCarbon: 0
+            },
+            trips: []
+        };
+
+        await CarService.saveCar(newCar);
+        setCars(prev => [...prev, newCar]);
         
-        setMyList([].concat(myList));
         try {
             Toast.show({type: 'success',text1: 'Success!', text2: car + " with " + fuel + " fuel added! ", visibilityTime: 3000, text1Style: {fontSize: 16, fontWeight: 'bold'},text2Style: {color:'#262626', fontSize:14}});
             navigation.navigate("Home");
