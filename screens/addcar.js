@@ -6,7 +6,7 @@ import Toast from "react-native-toast-message";
 import Icon from "react-native-vector-icons/Fontisto"
 
 import { useCars } from "../MyListContext";
-import { CarService } from "../carservice";
+import { CarService } from "../services/carService";
 
 const AddCar = ({navigation}) => {
     const { cars, setCars } = useCars();
@@ -47,7 +47,7 @@ const AddCar = ({navigation}) => {
 
         await CarService.saveCar(newCar);
         setCars(prev => [...prev, newCar]);
-        
+
         try {
             Toast.show({type: 'success',text1: 'Success!', text2: car + " with " + fuel + " fuel added! ", visibilityTime: 3000, text1Style: {fontSize: 16, fontWeight: 'bold'},text2Style: {color:'#262626', fontSize:14}});
             navigation.navigate("Home");

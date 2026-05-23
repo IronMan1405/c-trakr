@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { use, useEffect } from 'react';
 import { StyleSheet, Text, ScrollView, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from './screens/Home';
-import AddCar from './screens/addcar';
-import { useCars, CarProvider } from './MyListContext';
 import Toast from 'react-native-toast-message';
-import CarData from './screens/cardata';
+
+import Home from './screens/Home';
 import Root from './appRoot';
 import Signin from './screens/Signin';
 import Signup from './screens/Signup';
+import AddCar from './screens/addcar';
+import CarData from './screens/cardata';
+
+import { CarProvider } from './MyListContext';
+
+import { initDb } from './services/database';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-
+  useEffect(() => {initDb();}, []);
 
   return (
     <CarProvider>
