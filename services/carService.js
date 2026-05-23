@@ -48,7 +48,7 @@ export const CarService = {
 						resolve(true);
 					},
 					(_, err) => {
-						console.log("Get cars error: ", err);
+						console.log("save car error: ", err);
 						reject(err);
 						return false;
 					}

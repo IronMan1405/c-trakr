@@ -7,6 +7,7 @@ import Icon from "react-native-vector-icons/Fontisto"
 
 import { useCars } from "../MyListContext";
 import { CarService } from "../services/carService";
+import { TripService } from "../services/tripService";
 
 const AddCar = ({navigation}) => {
     const { cars, setCars } = useCars();
@@ -47,6 +48,38 @@ const AddCar = ({navigation}) => {
         };
 
         await CarService.saveCar(newCar);
+
+        await TripService.saveTrip({
+            id: Date.now().toString() + "_1",
+            car_id: newCar.id,
+            distance: 12.5,
+            fuel_used: 1.3,
+            carbon_emitted: 3.1,
+            avg_speed: 42,
+            created_at: "2026-05-19"
+        });
+            
+            await TripService.saveTrip({
+            id: Date.now().toString() + "_2",
+            car_id: newCar.id,
+            distance: 20.2,
+            fuel_used: 2.1,
+            carbon_emitted: 5.0,
+            avg_speed: 55,
+            created_at: "2026-05-20"
+        });
+            
+            await TripService.saveTrip({
+            id: Date.now().toString() + "_3",
+            car_id: newCar.id,
+            distance: 8.7,
+            fuel_used: 0.8,
+            carbon_emitted: 2.0,
+            avg_speed: 35,
+            created_at: "2026-05-21"
+        });
+            
+
         setCars(prev => [...prev, newCar]);
 
         try {
