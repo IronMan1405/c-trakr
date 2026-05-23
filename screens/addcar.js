@@ -42,7 +42,8 @@ const AddCar = ({navigation}) => {
                 totalFuel: 0,
                 totalCarbon: 0
             },
-            trips: []
+            trips: [],
+            created_at: new Date().toISOString(),
         };
 
         await CarService.saveCar(newCar);

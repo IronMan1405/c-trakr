@@ -50,8 +50,8 @@ const Home = ({navigation}) => {
                         <ListItem.Chevron/>
                         <ListItem.Content>
                             <ListItem.Title>{car.name}</ListItem.Title>
-                            <ListItem.Subtitle>Car Type: {car.car}</ListItem.Subtitle>
-                            <ListItem.Subtitle>Fuel Type: {car.fuel}</ListItem.Subtitle>
+                            <ListItem.Subtitle>Car Type: {car.car_type}</ListItem.Subtitle>
+                            <ListItem.Subtitle>Fuel Type: {car.fuel_type}</ListItem.Subtitle>
                         </ListItem.Content>
                     </ListItem>
                 ))}

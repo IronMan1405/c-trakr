@@ -1,42 +1,77 @@
 // carService.js
 
-import AsyncStorage from '@react-native-async-storage/async-storage';
-
-const STORAGE_KEY = "cars";
+import db from "./database";
 
 export const CarService = {
-  async getCars() {
-    try {
-      const storedCars = await AsyncStorage.getItem(STORAGE_KEY);
-      if (!storedCars) {
-        return [];
-      }
-      return JSON.parse(storedCars);
-    } catch (error) {
-      console.error('Error retrieving cars:', error);
-      return [];
-    }
-  },
+	getCars() {
+		return new Promise((resolve, reject) => {
+			db.transaction(tx => {
+				tx.executeSql(`
+					SELECT * FROM cars
+					ORDER BY created_at DESC;
+					`,
+					[],
+					(_, result) => {
+						resolve(result.rows._array);
+					},
+					(_, err) => {
+						console.log("Get cars error: ", err);
+						reject(err);
+						return false;
+					}
+				);
+			});
+		});
+	},
 
-  async saveCar(car) {
-    try {
-		const storedCars = await this.getCars();
-		const updatedCars = [...storedCars, car];
-		await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(updatedCars));
-		return true;
-    } catch (error) {
-		console.error('Error saving car:', error);
-		return false;
-    }
-  },
-
-  async deleteAllCars() {
-    try {
-		await AsyncStorage.removeItem(STORAGE_KEY);
-		return true;
-    } catch (error) {
-		console.error("Error deleting cars:", error); 
-		return false;
-    }
-  },
-};
+	saveCar(car) {
+		return new Promise ((resolve, reject) => {
+			db.transaction(tx => {
+				tx.executeSql(`
+					INSERT into cars (
+						id, 
+						name, 
+						car_type, 
+						fuel_type, 
+						created_at
+					)
+					VALUES (?, ?, ?, ?, ?);
+					`,
+					[
+						car.id,
+						car.name,
+						car.car,
+						car.fuel,
+						car.created_at
+					],
+					() => {
+						resolve(true);
+					},
+					(_, err) => {
+						console.log("Get cars error: ", err);
+						reject(err);
+						return false;
+					}
+				);
+			});
+		});
+	},
+	deleteAllCars() { 
+		return new Promise((resolve, reject) => { 
+			db.transaction(tx => { 
+				tx.executeSql(
+					`DELETE FROM cars;`, 
+					[], 
+					() => { 
+						resolve(true); 
+					}, 
+					(_, error) => { 
+						console.log("Delete cars error:", error); 
+						reject(error); 
+						return false; 
+					} 
+				); 
+			}); 
+		}); 
+	}
+}

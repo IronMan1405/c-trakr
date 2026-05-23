@@ -32,8 +32,8 @@ const CarData = (navigation) => {
                 <Text style={styles.titleStyle}>Car details</Text>
                 <Text style={styles.text}>Car name: {data.name}</Text>
                 <View style={{flex: 1, flexDirection: 'row', paddingTop: 12, paddingBottom: 35}} >
-                    <Text style={{paddingRight: 15, fontSize: 16}}>Car Type: {data.car}</Text>
-                    <Text style={styles.text}>Car Fuel Type: {data.fuel}</Text>
+                    <Text style={{paddingRight: 15, fontSize: 16}}>Car Type: {data.car_type}</Text>
+                    <Text style={styles.text}>Car Fuel Type: {data.fuel_type}</Text>
                 </View>
                     <View style={{flexDirection: 'row', alignItems: 'center', padding: 10}} >
                         <Image source={require("../ct_logo.png")} style={{height: 45, width: 45}} />

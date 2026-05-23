@@ -1,31 +1,35 @@
 import * as SQLite from 'expo-sqlite';
 
-let db = null;
+const db = SQLite.openDatabase('cTrakrdb.db');
 
-export const getDb = async () => {
-	if (db) {
-		return db;
-	}
-    const db = await SQLite.openDatabaseAsync('cTrakrDb');
-	return db;
-};
+// export const getDb = async () => {
+// 	if (db) {
+// 		return db;
+// 	}
+//     const db = await SQLite.openDatabaseAsync('cTrakrDb');
+// 	return db;
+// };
 
 export const initDb = async () => {
-	try {
-		const database = await getDb();
-
-		await database.execAsync(`
+	db.transaction(tx => {
+		tx.executeSql(`
 			CREATE TABLE IF NOT EXISTS cars (
-			id TEXT PRIMARY KEY NOT NULL,
-			name TEXT NOT NULL,
-			car_type TEXT NOT NULL,
-			fuel_type TEXT NOT NULL,
-			created_at TEXT NOT NULL
+				id TEXT PRIMARY KEY NOT NULL,
+				name TEXT NOT NULL,
+				car_type TEXT NOT NULL,
+				fuel_type TEXT NOT NULL,
+				created_at TEXT NOT NULL
 			);
-		`);
-
-		console.log("database initialized");
-	} catch (err) {
-		console.error("database initialize failed: ", err);
-	}
+			`,
+			[],
+			() => {
+				console.log("database initialized");
+			}, 
+			(_, err) => {
+				console.error("database initialize failed: ", err);
+			}
+		);
+	});
 };
+
+export default db;
