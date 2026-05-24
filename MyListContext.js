@@ -1,33 +1,22 @@
 import React, { createContext, useContext, useState } from "react";
 
-const MyListContext = createContext();
-const MyDistContext = createContext();
+const CarContext = createContext();
 
-const useMyList = () => {
-  const context = useContext(MyListContext);
-  if (!context) {
-    throw new Error("useMyList must be used in Provider");
-  }
-  return context;
+export const useCars = () => {
+	const context = useContext(CarContext);
+
+	if (!context) {
+		throw new Error("useCars must be used inside Provider");
+	}
+
+	return context;
 };
 
-const useMyDist = () => {
-  const context = useContext(MyDistContext);
-
-  if (!context) {
-    throw new Error("useMyDist must be used in Provider");
-  }
-  return context;
+export const CarProvider = ({children}) => {
+	const [cars, setCars] = useState([]);
+	return (
+		<CarContext.Provider value={{cars, setCars}}>
+			{children}
+		</CarContext.Provider>
+	);
 };
-
-const MyListProvider = (props) => {
-  const [myList, setMyList] = useState([]);
-  const [totalDist, setTotalDist] = useState(0);
-
-  return (
-    <>
-      <MyListContext.Provider {...props} value={{ myList, setMyList, totalDist, setTotalDist }} ></MyListContext.Provider>
-    </>
-  );
-};
-export { MyListProvider, useMyList, useMyDist };
