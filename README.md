@@ -39,3 +39,49 @@ Helping users answer one simple question:
 ## Contributing
 
 Ideas, collaborations, and feedback are welcome.
+
+## Setup
+
+### Prerequisites
+
+- Node.js 
+- npm 
+- Android Studio 
+- Java JDK 17 
+- Expo CLI
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone <repo-url>
+cd C-Trakr
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start Expo:
+
+```bash
+npx expo start
+```
+
+Run Android build:
+
+```bash
+npx expo run:android
+```
+
+### Notes
+- This project uses SQLite for local storage
+- Native folders (`android/` and `ios/`) are included in the repository
+- if native dependencies become inconsistent, run:
+
+```bash
+npx expo prebuild --clean
+```
