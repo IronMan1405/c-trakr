@@ -18,10 +18,6 @@ const CarData = ({ route }) => {
     const loadTrips = async () => {
         try {
             const result = await TripService.getTripsByCarId(car.id);
-            
-            // console.log("CAR ID:", car.id);
-            // console.log("TRIPS:", result);
-            
             setTrips(result);
         } catch (err) {
             console.error("set trips error: ", err);

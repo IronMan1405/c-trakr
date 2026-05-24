@@ -66,7 +66,7 @@ export const TripService = {
 			db.transaction(tx => { 
 				tx.executeSql(
 					`DELETE FROM trips
-                    WHERE carId = ?`, 
+                    WHERE car_id = ?`, 
 					[carId], 
 					() => { 
 						resolve(true); 
@@ -79,5 +79,49 @@ export const TripService = {
 				); 
 			}); 
 		}); 
+	},
+	getCarbonSummary() {
+		return new Promise((resolve, reject) => {
+			db.transaction(tx => {
+				tx.executeSql(
+					`SELECT created_at,
+					SUM(carbon_emitted) AS total_carbon
+					FROM trips
+					GROUP BY created_at
+					ORDER BY created_at ASC;`,
+					[],
+					(_, result) => { 
+						resolve(result.rows._array); 
+					}, 
+					(_, error) => { 
+						console.log("Carbon summary error:", error); 
+						reject(error); 
+						return false; 
+					} 
+				);
+			});
+		});
+	},
+	getFuelSummary() {
+		return new Promise((resolve, reject) => {
+			db.transaction(tx => {
+				tx.executeSql(
+					`SELECT created_at,
+					SUM(fuel_used) AS total_fuel
+					FROM trips
+					GROUP BY created_at
+					ORDER BY created_at ASC;`,
+					[],
+					(_, result) => { 
+						resolve(result.rows._array); 
+					}, 
+					(_, error) => { 
+						console.log("Fuel summary error:", error); 
+						reject(error); 
+						return false; 
+					} 
+				);
+			});
+		});
 	}
 }
