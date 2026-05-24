@@ -34,7 +34,7 @@ const Signin = ({navigation}) => {
     return (
     <View style={{flex: 1, justifyContent: 'center'}}>
         <View style={{alignItems: 'center', marginBottom: 40}}>
-        <Image source={require("../ct_logo.png")} style={{width: 150, height: 150}} />
+        <Image source={require("../assets/ct_logo.png")} style={{width: 150, height: 150}} />
         </View>
         <Text title center>Sign In</Text>
 

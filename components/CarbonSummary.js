@@ -22,7 +22,12 @@ const CarbonSummary = () => {
                 )
             );
 
-            const data = carbonSummary.map(item => item.total_carbon);
+            const data = carbonSummary.map(item => Number(item.total_carbon) || 0);
+
+            if (data.length === 0) {
+                data.push(0);
+                labels.push("No Data");
+            }
 
             setGraphData({
                 labels,
@@ -55,7 +60,6 @@ const CarbonSummary = () => {
                 />
             )}
             </View>
-            
         </View>
     );
 };

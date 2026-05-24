@@ -4,7 +4,7 @@ import TopNotifications from "../components/TopNotifications";
 import Summary from "../components/Summary";
 import Ads from "../components/Ads";
 
-export default Dashboard = () => {
+const Dashboard = () => {
     let ads = [];
     return (
         <ScrollView>
@@ -48,3 +48,13 @@ const styles = StyleSheet.create({
         marginBottom: 30
     }
 });
+
+// const Dashboard = () => {
+//     return (
+//         <View>
+//             <Text>Dashboard</Text>
+//         </View>
+//     );
+// };
+
+export default Dashboard;

@@ -5,7 +5,7 @@ export default Ads = () => {
     return (
         <View style={styles.adBox}>
             <Text>Ads</Text>
-            <Image source={require("../cas_2.jpg")} style={{width:360, height: 200}} />
+            <Image source={require("../assets/cas_2.jpg")} style={{width:360, height: 200}} />
         </View>
     );
 };

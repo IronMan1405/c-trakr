@@ -46,3 +46,22 @@ const Root = () => {
   };
 
   export default Root;
+
+
+// import React from "react";
+// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+// import Home from './screens/Home';
+// import Dashboard from './screens/Dashboard';
+
+
+// const Tab = createBottomTabNavigator();
+
+// const Root = () => {
+//     return (
+//         <Tab.Navigator>
+//             <Tab.Screen name="Home" component={Dashboard} />
+//         </Tab.Navigator>
+//     );
+// };
+
+// export default Root;

@@ -2,6 +2,7 @@
   "expo": {
     "name": "Carbon",
     "slug": "Carbon",
+    "icon": "./assets/ct_logo.png",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
@@ -13,6 +14,8 @@
       "bundleIdentifier": "com.carbon"
     },
     "splash": {
+      "image": "./assets/ct_logo.png", 
+      "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     }
   },

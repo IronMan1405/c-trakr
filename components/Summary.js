@@ -10,6 +10,7 @@ export default Summary = () => {
             <CarbonSummary/>
             <FuelSummary />
             <RewardPoints />
+            <Text>Summary</Text>
         </View>
     );
 };

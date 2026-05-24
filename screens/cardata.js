@@ -92,7 +92,7 @@ const CarData = ({ route }) => {
                 </View> 
                 
                 <View style={styles.graphTitleContainer}> 
-                    <Image source={require("../ct_logo.png")} style={{ height: 45, width: 45 }} /> 
+                    <Image source={require("../assets/ct_logo.png")} style={{ height: 45, width: 45 }} /> 
                     <Text style={styles.graphTitle}> 
                         Carbon Footprint 
                     </Text> 
