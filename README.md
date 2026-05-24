@@ -55,7 +55,7 @@ Ideas, collaborations, and feedback are welcome.
 Clone the repository:
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/IronMan1405/c-trakr.git
 cd C-Trakr
 ```
 
@@ -76,6 +76,11 @@ Run Android build:
 ```bash
 npx expo run:android
 ```
+Or use the convenience script: 
+```bash
+npm run android
+```
+This launches the Android build using the project's configured npm script.
 
 ### Notes
 - This project uses SQLite for local storage
