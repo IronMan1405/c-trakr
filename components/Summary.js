@@ -1,43 +1,28 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { View, StyleSheet } from "react-native";
 import FuelSummary from "./FuelSummary";
-import RewardPoints from "./RewardPoints";
 import CarbonSummary from "./CarbonSummary";
 
 export default Summary = () => {
     return (
-        <View>
-            <CarbonSummary/>
+        <View style={styles.card}>
+            <CarbonSummary />
+            <View style={styles.divider} />
             <FuelSummary />
-            <RewardPoints />
-            <Text>Summary</Text>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
-    notifBox: {
-        margin: 10,
-        borderColor: "#aaa",
-        borderWidth: 1,
-        borderRadius: 10,
-        backgroundColor: "#ddd"
+    card: {
+        backgroundColor: "#1a1d27",
+        borderRadius: 16,
+        padding: 14,
+        marginBottom: 12,
     },
-    title: {
-        fontSize: 20,
-        fontWeight: "bold",
-        padding: 5,
-        backgroundColor: "#999",
-        borderRadius: 10
-    },
-    notif: {
-        fontSize: 16,
-        fontWeight: "bold",
-        padding: 5
-    },
-    descr: {
-        fontSize: 14,
-        fontWeight: "bold",
-        padding: 5
+    divider: {
+        height: 0.5,
+        backgroundColor: "#2a2d36",
+        marginVertical: 14,
     }
 });

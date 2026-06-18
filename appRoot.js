@@ -16,14 +16,12 @@ const Root = () => {
           let iconName;
   
           if (route.name === 'Cars') {
-            // iconName = focused ? 'home' : 'home-outline';
             iconName = focused ? 'car' : 'car-outline';
           } else if (route.name === 'Settings') {
             iconName = focused ? 'settings' : 'settings-outline';
           } else if (route.name === 'Add Car') {
             iconName = focused ? 'car' : 'car-outline';
           } else if (route.name === 'Home') {
-            // iconName = focused ? 'shapes' : 'shapes-outline';
             iconName = focused ? 'home' : 'home-outline';
           } else if (route.name === 'Rewards') {
             iconName = focused ? 'gift' : 'gift-outline';
@@ -31,10 +29,26 @@ const Root = () => {
   
           return <Ionicons name={iconName} size={25} color={color} />;
         },
-        tabBarActiveTintColor: 'black',
-        tabBarInactiveTintColor: 'gray',
-        tabBarLabelStyle: {fontSize: 13.7},
-        tabBarStyle: {height: 45}
+        tabBarActiveTintColor: '#4ade80',
+        tabBarInactiveTintColor: '#555',
+        tabBarLabelStyle: { fontSize: 13.7 },
+        tabBarStyle: {
+          height: 55,
+          backgroundColor: '#0f1117',
+          borderTopColor: '#2a2d36',
+          borderTopWidth: 0.5,
+        },
+        headerStyle: {
+          backgroundColor: '#0f1117',
+          borderBottomColor: '#2a2d36',
+          borderBottomWidth: 0.5,
+          elevation: 0,
+          shadowOpacity: 0,
+        },
+        headerTintColor: '#ffffff',
+        headerTitleStyle: {
+          fontWeight: '500',
+        },
       })}>
         <Tab.Screen name="Home" component={Dashboard}  />
         <Tab.Screen name="Cars" component={Home}  />
@@ -46,22 +60,3 @@ const Root = () => {
   };
 
   export default Root;
-
-
-// import React from "react";
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-// import Home from './screens/Home';
-// import Dashboard from './screens/Dashboard';
-
-
-// const Tab = createBottomTabNavigator();
-
-// const Root = () => {
-//     return (
-//         <Tab.Navigator>
-//             <Tab.Screen name="Home" component={Dashboard} />
-//         </Tab.Navigator>
-//     );
-// };
-
-// export default Root;

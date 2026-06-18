@@ -1,0 +1,1590 @@
+[
+  {
+    "name": "Aston Martin Rapide",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Aston Martin Vantage",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Audi A3",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Audi A3",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Audi A3 Cabriolet",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Audi A5",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Audi A5 Cabriolet",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Audi A6",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Audi Q3",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Audi Q3",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Audi Q5",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Audi Q5",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Audi Q7",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Audi Q7",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Audi R8",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Audi Rs5",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Audi Rs7",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Audi S5",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "BYD Atto 3",
+    "fuel_type": "Electric"
+  },
+  {
+    "name": "BYD Seal",
+    "fuel_type": "Electric"
+  },
+  {
+    "name": "Bajaj Qute (Re60)",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bajaj Qute (Re60)",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Bentley Bentayga",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bentley Continental Gt",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bentley Flying Spur",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bentley Mulsanne",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bmw 3-Series",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Bmw 3-Series",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bmw 5-Series",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Bmw 5-Series",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bmw 6-Series",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Bmw 6-Series",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bmw 7-Series",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Bmw 7-Series",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bmw M2 Competition",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bmw M4",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bmw M5",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bmw X1",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Bmw X1",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bmw X3",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Bmw X3",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bmw X4",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Bmw X4",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bmw X5",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Bmw X5",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bmw X7",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bmw X7",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Bmw Z4 Roadster",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Bugatti Chiron",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Datsun Go",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Datsun Go+",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Datsun Redi-Go",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Dc Avanti",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Ferrari 458 Speciale",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Ferrari 458 Spider",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Ferrari 488 Gtb",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Ferrari 812 Superfast",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Ferrari Gtc4 Lusso",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Ferrari Portofino",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Fiat Abarth Avventura",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Fiat Abarth Punto",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Fiat Avventura",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Fiat Linea",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Fiat Linea",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Fiat Linea Classic",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Fiat Linea Classic",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Fiat Punto Evo",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Fiat Punto Evo",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Fiat Punto Evo Pure",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Fiat Punto Evo Pure",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Fiat Urban Cross",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Fiat Urban Cross",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Force Gurkha",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Ford Aspire",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Ford Aspire",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Ford Aspire",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Ford Ecosport",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Ford Ecosport",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Ford Endeavour",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Ford Figo",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Ford Figo",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Ford Freestyle",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Ford Freestyle",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Ford Mustang",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Honda Accord Hybrid",
+    "fuel_type": "Hybrid"
+  },
+  {
+    "name": "Honda Amaze",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Honda Amaze",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Honda Brv",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Honda Brv",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Honda City",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Honda City",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Honda City Hybrid",
+    "fuel_type": "Hybrid"
+  },
+  {
+    "name": "Honda Civic",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Honda Civic",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Honda Cr-V",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Honda Cr-V",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Honda Elevate",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Honda Jazz",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Honda Jazz",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Honda Wr-V",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Honda Wr-V",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai Aura",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai Aura",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Hyundai Aura",
+    "fuel_type": "CNG + Petrol"
+  },
+  {
+    "name": "Hyundai Creta",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Hyundai Creta",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai Elantra",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai Elite I20",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai Elite I20",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Hyundai Exter",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai Exter",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Hyundai Grand I10",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai Grand I10",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Hyundai Grand I10 Nios",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Hyundai Grand I10 Nios",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai Grand I10 Prime",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Hyundai Grand I10 Prime",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai I20 Active",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai I20 Active",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Hyundai IONIQ 5",
+    "fuel_type": "Electric"
+  },
+  {
+    "name": "Hyundai Santro",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai Santro",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Hyundai Tucson",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Hyundai Tucson",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai Venue",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai Venue",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Hyundai Verna",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai Verna",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Hyundai Xcent",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai Xcent Prime",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Hyundai Xcent Prime",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Hyundai i20",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Icml Extreme",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Isuzu Dmax V-Cross",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Isuzu Mu-X",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Jaguar F-Pace",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Jaguar F-Pace",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Jaguar F-Type",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Jaguar Xe",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Jaguar Xe",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Jaguar Xf",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Jaguar Xf",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Jaguar Xj",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Jeep Compass",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Jeep Compass",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Jeep Compass Trailhawk",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Jeep Grand Cherokee",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Jeep Grand Cherokee",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Jeep Wrangler",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Kia Carens",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Kia Carens",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Kia EV6",
+    "fuel_type": "Electric"
+  },
+  {
+    "name": "Kia Seltos",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Kia Seltos",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Kia Sonet",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Kia Sonet",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Lamborghini Aventador",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Lamborghini Huracan",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Lamborghini Urus",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Land Rover Discovery",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Land Rover Discovery",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Land Rover Rover Range",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Land Rover Rover Range Evoque",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Land Rover Rover Range Evoque Convertible",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Land Rover Rover Range Sport",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Land Rover Rover Range Velar",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Land Rover Rover Range Velar",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Lexus Es",
+    "fuel_type": "Hybrid"
+  },
+  {
+    "name": "Lexus Ls 500H",
+    "fuel_type": "Hybrid"
+  },
+  {
+    "name": "Lexus Lx 450D",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Lexus Lx 570",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Lexus Nx 300H",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Lexus Rx 450H",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "MG Motor Comet EV",
+    "fuel_type": "Electric"
+  },
+  {
+    "name": "MG Motor Hector",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "MG Motor Hector",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "MG Motor Windsor EV",
+    "fuel_type": "Electric"
+  },
+  {
+    "name": "MG Motor ZS EV",
+    "fuel_type": "Electric"
+  },
+  {
+    "name": "Mahindra Alturas G4",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Bolero",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Bolero Power Plus",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Kuv100 Nxt",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mahindra Kuv100 Nxt",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Marazzo",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Nuvosport",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Scorpio",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Scorpio-N",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mahindra Scorpio-N",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Thar",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Thar",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mahindra Thar Roxx",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mahindra Thar Roxx",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Tuv300",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Tuv300 Plus",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Verito",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Verito Vibe",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra XUV400 EV",
+    "fuel_type": "Electric"
+  },
+  {
+    "name": "Mahindra XUV700",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mahindra XUV700",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Xuv300",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mahindra Xuv300",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Xuv500",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mahindra Xuv500",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mahindra Xylo",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Maruti Suzuki Alto",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Alto",
+    "fuel_type": "CNG + Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Alto 800 Tour",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Alto K10",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Alto K10",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Maruti Suzuki Baleno",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Baleno",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Maruti Suzuki Baleno",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Maruti Suzuki Baleno Rs",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Brezza",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Brezza",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Maruti Suzuki Celerio",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Celerio",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Maruti Suzuki Celerio Tour",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Celerio Tour",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Maruti Suzuki Celerio X",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Ciaz",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Maruti Suzuki Ciaz",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Dzire",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Maruti Suzuki Dzire",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Dzire Tour",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Maruti Suzuki Dzire Tour",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Dzire Tour",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Maruti Suzuki Eeco",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Eeco",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Maruti Suzuki Ertiga",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Maruti Suzuki Ertiga",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Ertiga",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Maruti Suzuki Ertiga",
+    "fuel_type": "CNG + Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Fronx",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Fronx",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Maruti Suzuki Grand Vitara",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Grand Vitara",
+    "fuel_type": "Hybrid"
+  },
+  {
+    "name": "Maruti Suzuki Grand Vitara",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Maruti Suzuki Gypsy",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Ignis",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Omni",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki R Wagon",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki R Wagon",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Maruti Suzuki S-Cross",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Maruti Suzuki S-Presso",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Swift",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maruti Suzuki Swift",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Maruti Suzuki Swift",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Maruti Suzuki Vitara Brezza",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Maruti Suzuki Xl6",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maserati Grancabrio",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maserati Granturismo",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Maserati Levante",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Maserati Quattroporte",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mercedes-Benz A-Class",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mercedes-Benz A-Class",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mercedes-Benz Amg-Gt",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mercedes-Benz B-Class",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mercedes-Benz B-Class",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mercedes-Benz C-Class",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mercedes-Benz C-Class",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mercedes-Benz Cla-Class",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mercedes-Benz Cla-Class",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mercedes-Benz E-Class",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mercedes-Benz E-Class",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mercedes-Benz E-Class All Terrain",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mercedes-Benz E-Class Cabriolet",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mercedes-Benz Gla-Class",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mercedes-Benz Gla-Class",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mercedes-Benz Glc",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mercedes-Benz Glc",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mercedes-Benz Gls",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mercedes-Benz Gls",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mercedes-Benz Maybach",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mercedes-Benz S-Class",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mercedes-Benz S-Class",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mercedes-Benz S-Class Cabriolet",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mg Hector",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mini Clubman",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mini Convertible",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mini Cooper 3 Door",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mini Cooper 3 Door",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mini Cooper 5 Door",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mini Countryman",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mini Countryman",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mini John Cooper Works",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mitsubishi Montero",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Mitsubishi Outlander",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Mitsubishi Pajero Sport",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Nissan Gtr",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Nissan Kicks",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Nissan Kicks",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Nissan Micra",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Nissan Micra",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Nissan Micra Active",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Nissan Sunny",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Nissan Sunny",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Nissan Terrano",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Nissan Terrano",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Porsche 718",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Porsche 911",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Porsche Cayenne",
+    "fuel_type": "Hybrid"
+  },
+  {
+    "name": "Porsche Cayenne",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Porsche Cayenne Coupe",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Porsche Macan",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Porsche Panamera",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Premier Rio",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Premier Rio",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Renault Captur",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Renault Captur",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Renault Duster",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Renault Duster",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Renault Kwid",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Renault Lodgy",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Renault Triber",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Rolls-Royce Cullinan",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Rolls-Royce Dawn",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Rolls-Royce Drophead Coupe",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Rolls-Royce Ghost Series Ii",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Rolls-Royce Phantom",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Rolls-Royce Phantom Coupe",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Rolls-Royce Wraith",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Skoda Kodiaq",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Skoda Kodiaq Scout",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Skoda Monte Carlo",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Skoda Monte Carlo",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Skoda Octavia",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Skoda Octavia",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Skoda Rapid",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Skoda Rapid",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Skoda Superb",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Skoda Superb",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Skoda Superb Sportline",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Skoda Superb Sportline",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Tata Altroz",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Tata Altroz",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Tata Bolt",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Tata Bolt",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Tata Curvv EV",
+    "fuel_type": "Electric"
+  },
+  {
+    "name": "Tata Harrier",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Tata Hexa",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Tata Nano Genx",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Tata Nano Genx",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Tata Nexon",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Tata Nexon",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Tata Nexon EV",
+    "fuel_type": "Electric"
+  },
+  {
+    "name": "Tata Punch",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Tata Punch",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Tata Punch EV",
+    "fuel_type": "Electric"
+  },
+  {
+    "name": "Tata Safari",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Tata Safari Storme",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Tata Tiago",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Tata Tiago Nrg",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Tata Tiago Nrg",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Tata Tigor",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Tata Zest",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Tata Zest",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Toyota Camry",
+    "fuel_type": "Hybrid"
+  },
+  {
+    "name": "Toyota Corolla Altis",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Toyota Corolla Altis",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Toyota Etios Cross",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Toyota Etios Cross",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Toyota Etios Liva",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Toyota Etios Liva",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Toyota Fortuner",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Toyota Fortuner",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Toyota Glanza",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Toyota Innova Crysta",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Toyota Innova Crysta",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Toyota Innova Hycross",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Toyota Innova Hycross",
+    "fuel_type": "Hybrid"
+  },
+  {
+    "name": "Toyota Land Cruiser",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Toyota Land Cruiser Prado",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Toyota Platinum Etios",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Toyota Platinum Etios",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Toyota Prius",
+    "fuel_type": "Hybrid"
+  },
+  {
+    "name": "Toyota Urban Cruiser Hyryder",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Toyota Urban Cruiser Hyryder",
+    "fuel_type": "Hybrid"
+  },
+  {
+    "name": "Toyota Urban Cruiser Hyryder",
+    "fuel_type": "CNG"
+  },
+  {
+    "name": "Toyota Yaris",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Volkswagen Ameo",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Volkswagen Ameo",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Volkswagen Passat",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Volkswagen Polo",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Volkswagen Polo",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Volkswagen Tiguan",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Volkswagen Vento",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Volkswagen Vento",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Volvo S60",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Volvo S60 Cross Country",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Volvo V40",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Volvo V40 Cross Country",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Volvo V40 Cross Country",
+    "fuel_type": "Petrol"
+  },
+  {
+    "name": "Volvo V90 Cross Country",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Volvo Xc60",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Volvo Xc90",
+    "fuel_type": "Diesel"
+  },
+  {
+    "name": "Volvo Xc90",
+    "fuel_type": "Hybrid"
+  }
+]

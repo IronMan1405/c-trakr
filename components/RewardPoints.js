@@ -4,60 +4,53 @@ import { ProgressChart } from "react-native-chart-kit";
 
 export default RewardPoints = () => {
     const chartConfig = {
-        backgroundGradientFrom: "#1E2923",
-        backgroundGradientFromOpacity: 0,
-        backgroundGradientTo: "#08130D",
-        backgroundGradientToOpacity: 0.5,
-        color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
-        strokeWidth: 2, // optional, default 3
+        backgroundGradientFrom: "#1a1d27",
+        backgroundGradientFromOpacity: 1,
+        backgroundGradientTo: "#1a1d27",
+        backgroundGradientToOpacity: 1,
+        color: (opacity = 1) => `rgba(74, 222, 128, ${opacity})`,
+        strokeWidth: 2,
         barPercentage: 0.5,
-        useShadowColorFromDataset: false // optional
-      };
+        useShadowColorFromDataset: false
+    };
+
     const data = {
         labels: ["Today", "Total"],
         data: [0.2, 0.9]
     };
+
     return (
         <View style={styles.summaryBox}>
-            <View>
-                <Text style={styles.title}>Reward Points Summary</Text>
-            {
+            <Text style={styles.title}>Rewards</Text>
+            <Text style={styles.subtitle}>Points earned</Text>
             <ProgressChart 
                 data={data}
-                width={360}
-                height={150}
+                width={330}
+                height={140}
                 chartConfig={chartConfig}
                 strokeWidth={16}
                 radius={32}
                 hideLegend={false}
-            /> 
-            }
-            </View>
-            
+            />
         </View>
     );
 };
 
 const styles = StyleSheet.create({
     summaryBox: {
-        margin: 10,
-        borderColor: "#aaa",
-        borderWidth: 1,
-        borderRadius: 10,
+        backgroundColor: "#1a1d27",
+        borderRadius: 16,
+        padding: 14,
+        marginBottom: 12,
     },
     title: {
-        fontSize: 20,
-        fontWeight: "bold",
-        padding: 5,
-    },
-    notif: {
         fontSize: 16,
-        fontWeight: "bold",
-        padding: 5
+        fontWeight: "600",
+        color: "#ffffff",
     },
-    descr: {
-        fontSize: 14,
-        fontWeight: "bold",
-        padding: 5
-    }
+    subtitle: {
+        fontSize: 12,
+        color: "#666",
+        marginBottom: 6,
+    },
 });

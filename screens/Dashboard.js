@@ -1,60 +1,56 @@
 import React from "react";
-import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
-import TopNotifications from "../components/TopNotifications";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import Summary from "../components/Summary";
-import Ads from "../components/Ads";
 
 const Dashboard = () => {
-    let ads = [];
     return (
-        <ScrollView>
-        <View>
-            
-            <TopNotifications />
-            <Summary />
-            { /* 
-            <FlatList
-                horizontal
-                data={ads}
-                snapToInterval={boxWidth}
-                contentInset={{
-                    left: 100,
-                    right: 100,
-                }}
-                contentOffset={{ x: 100 * -1, y: 0 }}
-                onLayout={(e) => {
-                    setScrollViewWidth(e.nativeEvent.layout.width);
-                }}
-            /> */ }
-            <Ads />
-            <View style={styles.featureBox}>
-                <Text>Following features are provided:</Text>
-                <Text>Carbon Footprint percentage</Text>
-                <Text>Cars / Fuel detail</Text>
-                <Text>Fuel Summary</Text>
-                <Text>Reward Points</Text>
-                <Text>Social Media Share</Text>
-                <Text>Notifications on Rewards, Carbon Footprint, Fuel Save, Buy Discounts, etc</Text>
-
+        <ScrollView style={styles.scroll}>
+            <View style={styles.container}>
+                <View style={styles.headerRow}>
+                    <Text style={styles.heading}>Today</Text>
+                    <View style={styles.liveBadge}>
+                        <Text style={styles.liveText}>Live</Text>
+                    </View>
+                </View>
+                <View style={styles.row}>
+                    <View style={styles.card}>
+                        <Text style={styles.cardLabel}>CO₂ today</Text>
+                        <Text style={styles.cardVal}>0.0<Text style={styles.cardUnit}> kg</Text></Text>
+                    </View>
+                    <View style={styles.card}>
+                        <Text style={styles.cardLabel}>Distance</Text>
+                        <Text style={styles.cardVal}>0.0<Text style={styles.cardUnit}> km</Text></Text>
+                    </View>
+                </View>
+                <View style={styles.row}>
+                    <View style={styles.card}>
+                        <Text style={styles.cardLabel}>Points</Text>
+                        <Text style={[styles.cardVal, styles.green]}>0</Text>
+                    </View>
+                    <View style={styles.card}>
+                        <Text style={styles.cardLabel}>Trips today</Text>
+                        <Text style={styles.cardVal}>0</Text>
+                    </View>
+                </View>
+                <Summary />
             </View>
-        </View>
         </ScrollView>
     );
 };
 
 const styles = StyleSheet.create({
-    featureBox: {
-        margin: 10,
-        marginBottom: 30
-    }
+    scroll: { backgroundColor: "#0f1117" },
+    container: { flex: 1, paddingHorizontal: 12, paddingTop: 10, paddingBottom: 30 },
+    headerRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 12 },
+    heading: { fontSize: 22, fontWeight: "500", color: "#ffffff" },
+    liveBadge: { backgroundColor: "#1f2d1a", borderRadius: 20, paddingHorizontal: 10, paddingVertical: 3 },
+    liveText: { fontSize: 11, color: "#4ade80" },
+    row: { flexDirection: "row", gap: 10, marginBottom: 10 },
+    card: { flex: 1, backgroundColor: "#1a1d27", borderRadius: 14, padding: 16 },
+    cardLabel: { fontSize: 12, color: "#666", marginBottom: 6 },
+    cardVal: { fontSize: 26, fontWeight: "500", color: "#ffffff" },
+    cardUnit: { fontSize: 12, color: "#666" },
+    green: { color: "#4ade80" },
 });
-
-// const Dashboard = () => {
-//     return (
-//         <View>
-//             <Text>Dashboard</Text>
-//         </View>
-//     );
-// };
 
 export default Dashboard;

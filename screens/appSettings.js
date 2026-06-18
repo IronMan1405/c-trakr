@@ -1,96 +1,139 @@
-import React from "react";
-import { ScrollView, View, Text, Button, StyleSheet, TouchableOpacity } from "react-native";
-import { ListItem } from 'react-native-elements';
-import list1 from '../data.json';
-import Entypo from 'react-native-vector-icons/Entypo';
-import Feather from 'react-native-vector-icons/Feather';
-import TouchableScale from 'react-native-touchable-scale'; // https://github.com/kohver/react-native-touchable-scale
-import LinearGradient from 'react-native-linear-gradient'; // Only if no expo
+import React, { useState } from "react";
+import { View, Text, StyleSheet, TouchableOpacity, Modal } from "react-native";
 
-const list = [
-    {
-      title: 'Users Profile ',
-      icon: <Entypo name='add-user' />
-    },
-    {
-      title: 'About C-TRAKR',
-      icon: './c-trakr'
-    },
-    {
-        title: 'Report',
-        icon: <Feather name='alert-circle' />
-             
-    },
-    {
-        title: 'Social Media',
-        icon: <Entypo name='users' />
-    },
-  ]
-const Settings = () => {
-    // console.log(list);
-    // for (i in list) {
-    //     console.log('listitem ', i, list.title, typeof list.title);
-    // };
+const Settings = ({ navigation }) => {
+    const [logoutVisible, setLogoutVisible] = useState(false);
 
-    
-
-    const showSettings = () => {
-        let result = [];
-        for (let i in list) {
-            result.push(
-                <ListItem key={i+'_title'} topDivider bottomDivider style={styles.Settings} >
-                    <ListItem.Content>
-                        <ListItem.Title>
-                            {list[i].title}
-                        </ListItem.Title>
-                    </ListItem.Content>
-                    <ListItem.Chevron/>
-                </ListItem>
-            );
-            
-        };
-        return result;
+    const handleLogout = () => {
+        setLogoutVisible(false);
+        navigation.getParent()?.navigate('Sign In');
     };
-     
-    return (
-        <View style={styles.container}>
-            {
-            list1.map((list1, idx) => {
-                return(
-                
-                <ListItem key={idx+"_title"} topDivider bottomDivider style={styles.Settings}>
-                    <ListItem.Content style={styles.container1}>
-                        <ListItem.Title>{list1.name}</ListItem.Title>
-                    </ListItem.Content>
-                    <ListItem.Chevron/>
-                    {/* <Text>{list1.name}</Text> */}
-                </ListItem> 
-                );
-            })
 
-            }
+    return (
+        <View style={styles.screen}>
+            <View style={styles.container}>
+                <TouchableOpacity style={styles.row} onPress={() => navigation.getParent()?.navigate('Profile')}>
+                    <Text style={styles.rowIcon}>👤</Text>
+                    <Text style={styles.rowTitle}>Profile</Text>
+                    <Text style={styles.chevron}>›</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.row}>
+                    <Text style={styles.rowIcon}>⚙️</Text>
+                    <Text style={styles.rowTitle}>Preferences</Text>
+                    <Text style={styles.chevron}>›</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.row}>
+                    <Text style={styles.rowIcon}>📄</Text>
+                    <Text style={styles.rowTitle}>Report</Text>
+                    <Text style={styles.chevron}>›</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.row}>
+                    <Text style={styles.rowIcon}>❓</Text>
+                    <Text style={styles.rowTitle}>Help</Text>
+                    <Text style={styles.chevron}>›</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.row}>
+                    <Text style={styles.rowIcon}>ℹ️</Text>
+                    <Text style={styles.rowTitle}>About</Text>
+                    <Text style={styles.chevron}>›</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.logoutRow}
+                    onPress={() => setLogoutVisible(true)}>
+                    <Text style={styles.rowIcon}>🚪</Text>
+                    <Text style={styles.logoutText}>Logout</Text>
+                </TouchableOpacity>
+            </View>
+
+            <Modal
+                transparent
+                visible={logoutVisible}
+                animationType="fade"
+                onRequestClose={() => setLogoutVisible(false)}>
+                <View style={styles.overlay}>
+                    <View style={styles.modal}>
+                        <Text style={styles.modalTitle}>Log out?</Text>
+                        <Text style={styles.modalSub}>Are you sure you want to log out?</Text>
+                        <View style={styles.modalBtns}>
+                            <TouchableOpacity
+                                style={styles.cancelBtn}
+                                onPress={() => setLogoutVisible(false)}>
+                                <Text style={styles.cancelText}>Cancel</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                style={styles.confirmBtn}
+                                onPress={handleLogout}>
+                                <Text style={styles.confirmText}>Log out</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </View>
+            </Modal>
         </View>
     );
 };
 
-
 const styles = StyleSheet.create({
-    Settings: {
-        borderColor: "Black",
-        borderSize: 5,
-        // backgroundColor: 'rgba(0,0,0,0)'
+    screen: { flex: 1, backgroundColor: "#0f1117" },
+    container: { flex: 1, paddingHorizontal: 12, paddingTop: 10 },
+    row: {
+        flexDirection: "row",
+        alignItems: "center",
+        paddingVertical: 14,
+        paddingHorizontal: 14,
+        backgroundColor: "#1a1d27",
+        borderRadius: 12,
+        marginBottom: 8,
     },
-    container: {
+    rowIcon: { fontSize: 16, marginRight: 12 },
+    rowTitle: { flex: 1, fontSize: 14, color: "#cccccc" },
+    chevron: { fontSize: 20, color: "#555" },
+    logoutRow: {
+        flexDirection: "row",
+        alignItems: "center",
+        paddingVertical: 14,
+        paddingHorizontal: 14,
+        backgroundColor: "#1a1d27",
+        borderRadius: 12,
+        marginTop: 8,
+    },
+    logoutText: { fontSize: 14, color: "#f87171" },
+    overlay: {
         flex: 1,
-        // backgroundColor: 'hsla(223, 85%, 21%, 1)',
+        backgroundColor: "rgba(0,0,0,0.6)",
+        justifyContent: "center",
+        alignItems: "center",
     },
-    container1: {
-        // padding: 25,
-        // borderRadius: 15,
-        // borderWidth: 1,
-        // backgroundColor: 'rgba(0,0,0,0)'
-        // backgroundColor: 'hsla(223, 85%, 21%, 1)',
-    }
+    modal: {
+        backgroundColor: "#1a1d27",
+        borderRadius: 16,
+        padding: 24,
+        width: "80%",
+    },
+    modalTitle: { fontSize: 18, fontWeight: "600", color: "#ffffff", marginBottom: 8 },
+    modalSub: { fontSize: 13, color: "#666", marginBottom: 24 },
+    modalBtns: { flexDirection: "row", gap: 10 },
+    cancelBtn: {
+        flex: 1,
+        backgroundColor: "#12151f",
+        borderRadius: 10,
+        padding: 12,
+        alignItems: "center",
+    },
+    cancelText: { fontSize: 14, color: "#666" },
+    confirmBtn: {
+        flex: 1,
+        backgroundColor: "#2d1a1a",
+        borderRadius: 10,
+        padding: 12,
+        alignItems: "center",
+    },
+    confirmText: { fontSize: 14, color: "#f87171", fontWeight: "500" },
+});
 
-})
 export default Settings;

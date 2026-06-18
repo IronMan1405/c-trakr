@@ -1,105 +1,78 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useCallback } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { PieChart } from "react-native-chart-kit";
-
+import { useFocusEffect } from "@react-navigation/native";
 import { TripService } from "../services/tripService";
 
 const FuelSummary = () => {
-    const [chartData, setChartData] = useState(null);
-    
-    useEffect(() => {
-        loadSummary();
-    }, []);
-    
+    const [totalFuel, setTotalFuel] = useState(0);
+
+    useFocusEffect(
+        useCallback(() => {
+            loadSummary();
+        }, [])
+    );
+
     const loadSummary = async () => {
         try {
             const fuelSummary = await TripService.getFuelSummary();
-
-            const labels = fuelSummary.map(
-                item => new Date(item.created_at).toLocaleDateString(
-                    'en-GB', 
-                    {day: 'numeric', month: 'short'}
-                )
-            );
-
-            const totalFuel = fuelSummary.reduce((sum, item) => sum + item.total_fuel, 0);
-
-            setChartData([
-                {
-                    name: "Used Fuel",
-                    used: totalFuel,
-                    color: "rgb(255, 0, 0)",
-                    legendFontColor: "#7f7f7f",
-                    legendFontSize: 15
-                },
-                {
-                    name: "Not Run",
-                    used: Math.max(1, 50-totalFuel),
-                    color: "rgb(0, 255, 0)",
-                    legendFontColor: "#7f7f7f",
-                    legendFontSize: 15
-                }
-            ]);
+            const total = fuelSummary.reduce((sum, item) => sum + item.total_fuel, 0);
+            setTotalFuel(total);
         } catch (err) {
             console.error("set summary error: ", err);
         }
     };
 
     return (
-        <View style={styles.summaryBox}>
-            <View>
-                <Text style={styles.title}>Today's Fuel Summary</Text>
-            {chartData && (
-                <PieChart 
-                    data={chartData}
-                    width={400}
-                    height={150}
-                    chartConfig={styles.chartConfig}
-                    accessor={"used"}
-                    backgroundColor={"transparent"}
-                    paddingLeft={"15"}
-                    center={[5, 5]}
-                    absolute
-                />
-            )}
+        <View>
+            <View style={styles.headerRow}>
+                <View>
+                    <Text style={styles.sectionLabel}>FUEL</Text>
+                    <Text style={styles.bigNum}>{totalFuel.toFixed(1)}<Text style={styles.bigUnit}> L</Text></Text>
+                </View>
+                <View style={styles.badge}>
+                    <Text style={styles.badgeText}>Today</Text>
+                </View>
             </View>
-            
+
+            <View style={styles.metricRow}>
+                <Text style={styles.metricLabel}>Used</Text>
+                <Text style={[styles.metricVal, styles.red]}>{totalFuel.toFixed(1)} L</Text>
+            </View>
+            <View style={styles.metricRow}>
+                <Text style={styles.metricLabel}>Efficiency</Text>
+                <Text style={styles.metricVal}>0.0 km/L</Text>
+            </View>
+            <View style={[styles.metricRow, { borderBottomWidth: 0 }]}>
+                <Text style={styles.metricLabel}>Cost est.</Text>
+                <Text style={[styles.metricVal, styles.red]}>₹0</Text>
+            </View>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
-    summaryBox: {
-        margin: 10,
-        borderColor: "#aaa",
-        borderWidth: 1,
-        borderRadius: 10,
+    headerRow: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        marginBottom: 10,
     },
-    title: {
-        fontSize: 20,
-        fontWeight: "bold",
-        padding: 5,
+    sectionLabel: { fontSize: 10, color: "#555", letterSpacing: 0.5, marginBottom: 4 },
+    bigNum: { fontSize: 32, fontWeight: "500", color: "#ffffff", lineHeight: 36 },
+    bigUnit: { fontSize: 14, color: "#555" },
+    badge: { backgroundColor: "#1f2d1a", borderRadius: 20, paddingHorizontal: 10, paddingVertical: 3 },
+    badgeText: { fontSize: 10, color: "#4ade80" },
+    metricRow: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        paddingVertical: 7,
+        borderBottomWidth: 0.5,
+        borderBottomColor: "#12151f",
     },
-    notif: {
-        fontSize: 16,
-        fontWeight: "bold",
-        padding: 5
-    },
-    descr: {
-        fontSize: 14,
-        fontWeight: "bold",
-        padding: 5
-    },
-    chartConfig: {
-        backgroundGradientFrom: "#1E2923",
-        backgroundGradientFromOpacity: 0,
-        backgroundGradientTo: "#08130D",
-        backgroundGradientToOpacity: 0.5,
-        color: (opacity = 1) => `rgba(26, 255, 146, ${opacity})`,
-        strokeWidth: 2, // optional
-        barPercentage: 0.5,
-        useShadowColorFromDataset: false // optional
-    }
+    metricLabel: { fontSize: 12, color: "#555" },
+    metricVal: { fontSize: 13, fontWeight: "500", color: "#ffffff" },
+    red: { color: "#f87171" },
 });
 
 export default FuelSummary;

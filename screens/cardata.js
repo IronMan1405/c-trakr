@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {BarGraph, LineGraph} from '../auth/charts';
-
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { BarGraph, LineGraph } from '../auth/charts';
 import { TripService } from '../services/tripService';
 
 const CarData = ({ route }) => {
     const car = route.params;
-
     const [trips, setTrips] = useState([]);
 
     useEffect(() => {
@@ -24,147 +20,81 @@ const CarData = ({ route }) => {
         }
     };
 
-    const labels = trips.map(
-        trip => new Date(trip.created_at).toLocaleDateString(
-            'en-GB', 
-            {day: 'numeric', month: 'short'}
-        )
+    const labels = trips.map(trip =>
+        new Date(trip.created_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })
     );
 
     const distanceData = trips.map(trip => trip.distance);
-    const carbonDataValues = trips.map(trip => trip.carbon_emitted); 
-    const fuelDataValues = trips.map(trip => trip.fuel_used); 
-    
-    const totalDistance = distanceData.reduce((a, b) => a + b, 0); 
-    const totalFuel = fuelDataValues.reduce((a, b) => a + b, 0); 
+    const carbonDataValues = trips.map(trip => trip.carbon_emitted);
+    const fuelDataValues = trips.map(trip => trip.fuel_used);
+
+    const totalDistance = distanceData.reduce((a, b) => a + b, 0);
+    const totalFuel = fuelDataValues.reduce((a, b) => a + b, 0);
     const totalCarbon = carbonDataValues.reduce((a, b) => a + b, 0);
 
-    const distanceGraph = {
-        labels,
-        datasets: [{
-            data: distanceData
-        }]
-    };
-
-    const carbonGraph = {
-        labels,
-        datasets: [{
-            data: carbonDataValues
-        }]
-    };
-
-    const fuelGraph = {
-        labels,
-        datasets: [{
-            data: fuelDataValues
-        }]
-    };
+    const distanceGraph = { labels, datasets: [{ data: distanceData }] };
+    const carbonGraph = { labels, datasets: [{ data: carbonDataValues }] };
+    const fuelGraph = { labels, datasets: [{ data: fuelDataValues }] };
 
     return (
-        <ScrollView> 
-            <View style={styles.container}> 
-                <Text style={styles.titleStyle}>
-                    Car Details
-                </Text> 
-                <Text style={styles.text}> 
-                    Car Name: {car.name} 
-                </Text> 
-                
-                <View style={styles.row}> 
-                    <Text style={styles.text}> 
-                        Car Type: {car.car_type} 
-                    </Text> 
-                    <Text style={styles.text}> 
-                        Fuel Type: {car.fuel_type} 
-                    </Text> 
-                </View> 
-                
-                <View style={styles.summaryBox}> 
-                    <Text style={styles.summaryText}> 
-                        Total Distance: {totalDistance.toFixed(1)} km 
-                    </Text> 
-                    <Text style={styles.summaryText}> 
-                        Fuel Used: {totalFuel.toFixed(1)} L 
-                    </Text> 
-                    <Text style={styles.summaryText}> 
-                        Carbon Emitted: {totalCarbon.toFixed(1)} kg 
-                    </Text> 
-                </View> 
-                
-                <View style={styles.graphTitleContainer}> 
-                    <Image source={require("../assets/ct_logo.png")} style={{ height: 45, width: 45 }} /> 
-                    <Text style={styles.graphTitle}> 
-                        Carbon Footprint 
-                    </Text> 
-                </View> 
-                
-                {trips.length > 0 && LineGraph(carbonGraph)} 
-                
-                <View style={styles.graphTitleContainer}> 
-                    <MaterialIcons name='mode-of-travel' size={35} color='#000' /> 
-                    <Text style={styles.graphTitle}> 
-                        Distance Traveled 
-                    </Text> 
-                </View> 
-                
-                {trips.length > 0 && BarGraph(distanceGraph)} 
-                
-                <View style={styles.graphTitleContainer}> 
-                    <MaterialCommunityIcons name='fuel' size={35} color='#000' /> 
-                    <Text style={styles.graphTitle}> 
-                        Fuel Consumed 
-                    </Text> 
-                </View> 
-                
-                {trips.length > 0 && LineGraph(fuelGraph)} 
-            </View> 
+        <ScrollView style={styles.screen}>
+            <View style={styles.container}>
+                <Text style={styles.carName}>{car.name}</Text>
+                <View style={styles.pillRow}>
+                    <View style={styles.pill}><Text style={styles.pillText}>{car.fuel_type}</Text></View>
+                    <View style={styles.pill}><Text style={styles.pillText}>{car.car_type}</Text></View>
+                </View>
+
+                <View style={styles.statRow}>
+                    <View style={styles.statCard}>
+                        <Text style={styles.statLabel}>Distance</Text>
+                        <Text style={styles.statVal}>{totalDistance.toFixed(1)}<Text style={styles.statUnit}> km</Text></Text>
+                    </View>
+                    <View style={styles.statCard}>
+                        <Text style={styles.statLabel}>Fuel used</Text>
+                        <Text style={styles.statVal}>{totalFuel.toFixed(1)}<Text style={styles.statUnit}> L</Text></Text>
+                    </View>
+                    <View style={styles.statCard}>
+                        <Text style={styles.statLabel}>Carbon</Text>
+                        <Text style={[styles.statVal, styles.green]}>{totalCarbon.toFixed(1)}<Text style={styles.statUnit}> kg</Text></Text>
+                    </View>
+                </View>
+
+                <View style={styles.graphCard}>
+                    <Text style={styles.graphTitle}>Carbon Footprint</Text>
+                    {trips.length > 0 ? LineGraph(carbonGraph) : <Text style={styles.noData}>No data yet</Text>}
+                </View>
+
+                <View style={styles.graphCard}>
+                    <Text style={styles.graphTitle}>Distance Traveled</Text>
+                    {trips.length > 0 ? BarGraph(distanceGraph) : <Text style={styles.noData}>No data yet</Text>}
+                </View>
+
+                <View style={styles.graphCard}>
+                    <Text style={styles.graphTitle}>Fuel Consumed</Text>
+                    {trips.length > 0 ? LineGraph(fuelGraph) : <Text style={styles.noData}>No data yet</Text>}
+                </View>
+            </View>
         </ScrollView>
     );
-}
+};
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center', 
-        alignItems: 'center',
-        paddingBottom: 30
-    //   paddingVertical: 20
-    },
-    titleStyle: {
-        fontSize: 30,
-        fontWeight: 'bold',
-        alignItems: 'center',
-        padding: 24,
-    },
-    text: {
-        fontSize: 16
-    },
-    row: {
-        flex: 1, 
-        flexDirection: 'row', 
-        paddingTop: 12, 
-        paddingBottom: 35
-    },
-    graphTitleContainer: { 
-        flexDirection: 'row', 
-        alignItems: 'center', 
-        padding: 10 
-    }, 
-    graphTitle: { 
-        fontSize: 20, 
-        marginLeft: 10 
-    }, 
-    summaryBox: { 
-        width: '90%', 
-        padding: 15, 
-        marginBottom: 20, 
-        borderRadius: 12, 
-        backgroundColor: '#f2f2f2' 
-    }, 
-    summaryText: { 
-        fontSize: 16, 
-        marginVertical: 4 
-    },
+    screen: { backgroundColor: "#0f1117" },
+    container: { flex: 1, paddingHorizontal: 12, paddingTop: 14, paddingBottom: 30 },
+    carName: { fontSize: 22, fontWeight: "500", color: "#ffffff", marginBottom: 10 },
+    pillRow: { flexDirection: "row", gap: 8, marginBottom: 14 },
+    pill: { backgroundColor: "#1f2d1a", borderRadius: 20, paddingHorizontal: 12, paddingVertical: 4 },
+    pillText: { fontSize: 12, color: "#4ade80" },
+    statRow: { flexDirection: "row", gap: 8, marginBottom: 14 },
+    statCard: { flex: 1, backgroundColor: "#1a1d27", borderRadius: 12, padding: 12 },
+    statLabel: { fontSize: 11, color: "#666", marginBottom: 4 },
+    statVal: { fontSize: 16, fontWeight: "500", color: "#ffffff" },
+    statUnit: { fontSize: 10, color: "#666" },
+    green: { color: "#4ade80" },
+    graphCard: { backgroundColor: "#1a1d27", borderRadius: 14, padding: 14, marginBottom: 12 },
+    graphTitle: { fontSize: 14, fontWeight: "500", color: "#ffffff", marginBottom: 10 },
+    noData: { fontSize: 13, color: "#555", textAlign: "center", paddingVertical: 20 },
 });
 
 export default CarData;

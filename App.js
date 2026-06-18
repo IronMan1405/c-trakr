@@ -10,6 +10,7 @@ import Signin from './screens/Signin';
 import Signup from './screens/Signup';
 import AddCar from './screens/addcar';
 import CarData from './screens/cardata';
+import Profile from './screens/Profile';
 
 import { CarProvider } from './MyListContext';
 
@@ -30,6 +31,7 @@ export default function App() {
           <Stack.Screen name='Home' component={Home}></Stack.Screen>
           <Stack.Screen name='Add Car' component={AddCar}></Stack.Screen>
           <Stack.Screen name='Car Details' component={CarData}></Stack.Screen>
+          <Stack.Screen name='Profile' component={Profile} />
         </Stack.Navigator>
       </NavigationContainer>
       <Toast/>
